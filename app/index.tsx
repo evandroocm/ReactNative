@@ -1,25 +1,95 @@
-import { Text, View, Image, TouchableOpacity } from "react-native";
+import { Text, View, Image, TouchableOpacity, ScrollView } from "react-native";
 
 export default function Index() {
   return (
-    <View>
-      <View className="w-full h-16 bg-purple-600 justify-center items-start pl-4">
-          <Text className="color-slate-50 justify-start text-2xl font-bold">Detalhes do Produto</Text>
+    <View className="bg-slate-200 h-full">
+      <View className="w-full h-16 bg-pink-500 justify-center items-start pl-4">
+          <Text className="color-slate-50 justify-start text-2xl font-bold">Turma da meia</Text>
       </View>
 
-      <View className="w-full h-72 justify-center items-center">
-        <Image source={require('../assets/images/copaoAcai.png')} className="max-w-48 max-h-48" resizeMode="cover"></Image>
+      <View className="gap-2 pt-4 flex-row justify-center">
+        <View className="justify-center w-28 h-36 rounded-xl bg-slate-50 p-3 shadow-md">
+          <Text className="font-normal text-xl">Visitas</Text>
+          <Text className="font-bold color-blue-600 text-3xl">1,500</Text>
+          <Text className="font-normal text-sm color-slate-400">Últimos 7 dias</Text>
+        </View>
+        <View className="justify-center w-28 h-36 rounded-xl bg-slate-50 p-3 shadow-md">
+          <Text className="font-normal text-xl">Vendas</Text>
+          <Text className="font-bold color-green-600 text-3xl">320</Text>
+          <Text className="font-normal text-sm color-slate-400">Últimos 7 dias</Text>
+        </View>
+        <View className="justify-center w-28 h-36 rounded-xl bg-slate-50 p-3 shadow-md">
+          <Text className="font-normal text-xl">Novos usuários</Text>
+          <Text className="font-bold color-yellow-600 text-3xl">120</Text>
+          <Text className="font-normal text-sm color-slate-400">Últimos 7 dias</Text>
+        </View>
       </View>
 
-      <Text className="p-4 font-bold text-4xl">Açaí 500ml</Text>
-      <Text className="p-4 font-normal text-xl text-justify">Este produto foi criado com materiais de alta qualidade,
-      visando sempre o sabor. Este produto foi criado com materiais de alta qualidade, visando sempre o sabor.</Text>
+      <View className="flex-1 justify-center items-center mt-8">
+        <ScrollView className="">
+          <View className="p-6 w-80 h-86 rounded-xl bg-white gap-2 mb-4">
+            <View className="items-center">
+              <Image source={require('../assets/images/meia-stitch.webp')} className="max-w-40 max-h-40" resizeMode="cover"></Image>
+            </View>
+            <Text className="font-normal text-xl">Item</Text>
+            <Text className="font-normal text-md text-justify text-wrap">Descrição do item 1. 
+            Informações adicionais podem ser inderidas aqui.</Text>
+            <TouchableOpacity className="items-center justify-center w-full h-10 rounded-full  bg-pink-500">
+                <Text className="color-slate-200 text-md font-medium">Ver mais</Text>
+            </TouchableOpacity>
+          </View>
 
-      <Text className="pl-4 font-bold color-green-400 text-2xl">R$ 32,90</Text>
+          <View className="p-6 w-80 h-86 rounded-xl bg-white gap-2 mb-4">
+            <View className="items-center">
+              <Image source={require('../assets/images/meia-mike.webp')} className="max-w-40 max-h-40" resizeMode="cover"></Image>
+            </View>
+            <Text className="font-normal text-xl">Item</Text>
+            <Text className="font-normal text-md text-justify text-wrap">Descrição do item 1. 
+            Informações adicionais podem ser inderidas aqui.</Text>
+            <TouchableOpacity className="items-center justify-center w-full h-10 rounded-full  bg-pink-500">
+                <Text className="color-slate-200 text-md font-medium">Ver mais</Text>
+            </TouchableOpacity>
+          </View>
 
-      <TouchableOpacity className="bg-purple-600 m-4 p-6 rounded-full items-center">
-        <Text className="color-slate-200 text-lg font-medium">Comprar agora</Text>
-      </TouchableOpacity>
+          <View className="p-6 w-80 h-86 rounded-xl bg-white gap-2 mb-4">
+            <View className="items-center">
+              <Image source={require('../assets/images/meia-tigrao.webp')} className="max-w-40 max-h-40" resizeMode="cover"></Image>
+            </View>
+            <Text className="font-normal text-xl">Item</Text>
+            <Text className="font-normal text-md text-justify text-wrap">Descrição do item 1. 
+            Informações adicionais podem ser inderidas aqui.</Text>
+            <TouchableOpacity className="items-center justify-center w-full h-10 rounded-full  bg-blue-600">
+                <Text className="color-slate-200 text-md font-medium">Ver mais</Text>
+            </TouchableOpacity>
+          </View>
+          <View className="p-6 w-80 h-86 rounded-xl bg-white gap-2 mb-4">
+            <View className="items-center">
+              <Image source={require('../assets/images/copaoAcai.png')} className="max-w-40 max-h-40" resizeMode="cover"></Image>
+            </View>
+            <Text className="font-normal text-xl">Item</Text>
+            <Text className="font-normal text-md text-justify text-wrap">Descrição do item 1. 
+            Informações adicionais podem ser inderidas aqui.</Text>
+            <TouchableOpacity className="items-center justify-center w-full h-10 rounded-full  bg-blue-600">
+                <Text className="color-slate-200 text-md font-medium">Ver mais</Text>
+            </TouchableOpacity>
+          </View>
+          <View className="p-6 w-80 h-86 rounded-xl bg-white gap-2 mb-4">
+            <View className="items-center">
+              <Image source={require('../assets/images/copaoAcai.png')} className="max-w-40 max-h-40" resizeMode="cover"></Image>
+            </View>
+            <Text className="font-normal text-xl">Item</Text>
+            <Text className="font-normal text-md text-justify text-wrap">Descrição do item 1. 
+            Informações adicionais podem ser inderidas aqui.</Text>
+            <TouchableOpacity className="items-center justify-center w-full h-10 rounded-full  bg-blue-600">
+                <Text className="color-slate-200 text-md font-medium">Ver mais</Text>
+            </TouchableOpacity>
+          </View>
+
+        </ScrollView>
+      </View>
+
+
+
     </View>
   );
 }
