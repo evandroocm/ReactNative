@@ -58,29 +58,29 @@ export default function Index() {
             <Text className="font-normal text-xl">Item</Text>
             <Text className="font-normal text-md text-justify text-wrap">Descrição do item 1. 
             Informações adicionais podem ser inderidas aqui.</Text>
-            <TouchableOpacity className="items-center justify-center w-full h-10 rounded-full  bg-blue-600">
+            <TouchableOpacity className="items-center justify-center w-full h-10 rounded-full  bg-pink-500">
                 <Text className="color-slate-200 text-md font-medium">Ver mais</Text>
             </TouchableOpacity>
           </View>
           <View className="p-6 w-80 h-86 rounded-xl bg-white gap-2 mb-4">
             <View className="items-center">
-              <Image source={require('../assets/images/copaoAcai.png')} className="max-w-40 max-h-40" resizeMode="cover"></Image>
+              <Image source={require('../assets/images/meia-pug.webp')} className="max-w-40 max-h-40" resizeMode="cover"></Image>
             </View>
             <Text className="font-normal text-xl">Item</Text>
             <Text className="font-normal text-md text-justify text-wrap">Descrição do item 1. 
             Informações adicionais podem ser inderidas aqui.</Text>
-            <TouchableOpacity className="items-center justify-center w-full h-10 rounded-full  bg-blue-600">
+            <TouchableOpacity className="items-center justify-center w-full h-10 rounded-full  bg-pink-500">
                 <Text className="color-slate-200 text-md font-medium">Ver mais</Text>
             </TouchableOpacity>
           </View>
           <View className="p-6 w-80 h-86 rounded-xl bg-white gap-2 mb-4">
             <View className="items-center">
-              <Image source={require('../assets/images/copaoAcai.png')} className="max-w-40 max-h-40" resizeMode="cover"></Image>
+              <Image source={require('../assets/images/meia-pantera-cor-de-rosa.webp')} className="max-w-40 max-h-40" resizeMode="cover"></Image>
             </View>
             <Text className="font-normal text-xl">Item</Text>
             <Text className="font-normal text-md text-justify text-wrap">Descrição do item 1. 
             Informações adicionais podem ser inderidas aqui.</Text>
-            <TouchableOpacity className="items-center justify-center w-full h-10 rounded-full  bg-blue-600">
+            <TouchableOpacity className="items-center justify-center w-full h-10 rounded-full  bg-pink-500">
                 <Text className="color-slate-200 text-md font-medium">Ver mais</Text>
             </TouchableOpacity>
           </View>
