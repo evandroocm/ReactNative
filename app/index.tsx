@@ -16,7 +16,7 @@ export default function Index() {
                 placeholder="Senha"
             />
 
-            <TouchableOpacity>
+            <TouchableOpacity style={styles.containerPass}>
                 <Link href={"/recuperarSenha/recuperarSenha"}>
                     <Text style={styles.pass}>Esqueceu à senha?</Text>
                 </Link>
@@ -35,6 +35,12 @@ export default function Index() {
             >
             <Text style={styles.text}>Entrar</Text>
             </LinearGradient>
+
+            <TouchableOpacity>
+                <Link href={"/recuperarSenha/recuperarSenha"}>
+                    <Text>Não tem conta? <Text style={styles.baseText}>Criar</Text></Text>
+                </Link>
+            </TouchableOpacity>
         </View>
     );
 }
@@ -43,8 +49,8 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: '#fff',
-        justifyContent: 'center',
         alignItems: 'center',
+        justifyContent: 'center',
     },
     title: {
         fontSize: 40,
@@ -69,7 +75,7 @@ const styles = StyleSheet.create({
         shadowColor: '#000',
         shadowOffset: { width: 4, height: 4 },
         shadowOpacity: 0.20,
-        shadowRadius: 8
+        shadowRadius: 8,
     },
     button: {
         backgroundColor: '#000',
@@ -84,10 +90,12 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         textAlign: 'center',
     },
-    pass: {
-        color: '#666',
+    containerPass: {
+        
+    },
+    baseText: {
         fontSize: 16,
-        textAlign: 'center',
-        marginTop: 10,
+        color: '#9A39DB',
+        fontWeight: 'bold',
     },
 });
