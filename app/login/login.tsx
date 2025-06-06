@@ -1,6 +1,8 @@
-import Login from "./login/login";
+import { Button, StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
+import { LinearGradient } from 'expo-linear-gradient';
+import { Link } from "expo-router";
 
-export default function Index() {
+export default function Login() {
     return (
         <View style={styles.container}>
             <Text style={styles.title}>Bem vindo</Text>
@@ -14,7 +16,7 @@ export default function Index() {
                 placeholder="Senha"
             />
 
-            <TouchableOpacity style={styles.containerPass}>
+            <TouchableOpacity style={styles.passwordContainer}>
                 <Link href={"/recuperarSenha/recuperarSenha"}>
                     <Text style={styles.pass}>Esqueceu à senha?</Text>
                 </Link>
@@ -31,12 +33,18 @@ export default function Index() {
                 start={{ x: 0, y: 0 }} 
                 end={{ x: 1, y: 0 }} 
             >
-            <Text style={styles.text}>Entrar</Text>
+            <TouchableOpacity style={styles.loginButton}>
+                <Link href={"/home/home"}>
+                    <Text style={styles.text}>Entrar</Text>
+                </Link>
+            </TouchableOpacity>
+
             </LinearGradient>
 
-            <TouchableOpacity>
-                <Link href={"/recuperarSenha/recuperarSenha"}>
-                    <Text>Não tem conta? <Text style={styles.baseText}>Criar</Text></Text>
+            <TouchableOpacity style={styles.createAccount}>
+                <Text style={styles.account}>Não tem uma conta?</Text>
+                <Link href={"/singin/singin"}>
+                    <Text style={styles.createAccountBold}>Criar</Text>
                 </Link>
             </TouchableOpacity>
         </View>
@@ -46,9 +54,9 @@ export default function Index() {
 const styles = StyleSheet.create({ 
     container: {
         flex: 1,
-        backgroundColor: '#fff',
-        alignItems: 'center',
+        backgroundColor: '#f8f8f8',
         justifyContent: 'center',
+        alignItems: 'center',
     },
     title: {
         fontSize: 40,
@@ -59,41 +67,64 @@ const styles = StyleSheet.create({
         fontSize: 16,
         textAlign: 'center',
         marginBottom: 20,
-        color: '#666',
+        color: '#444',
     },
     input: {
         height: 40,
-        borderColor: '#ccc',
+        borderColor: '#f8f8f8',
         borderRadius: 32,
         borderWidth: 1,
         paddingHorizontal: 20,
         marginVertical: 10,
         width: '80%',
-        backgroundColor: '#f8f8f8',
+        backgroundColor: '#fff',
         shadowColor: '#000',
         shadowOffset: { width: 4, height: 4 },
         shadowOpacity: 0.20,
-        shadowRadius: 8,
+        shadowRadius: 8
     },
     button: {
-        backgroundColor: '#000',
+        backgroundColor: '#444',
         padding: 10,
         borderRadius: 32,
         marginTop: 20,
         width: '80%',
     },
     text: {
-        color: '#fff',
+        color: '#f8f8f8',
         fontSize: 18,
         fontWeight: 'bold',
         textAlign: 'center',
     },
-    containerPass: {
-        
+    passwordContainer: {
+        width: '80%',
+        alignItems: 'flex-end',
+        marginTop: 10,
     },
-    baseText: {
+    pass: {
+        color: '#444',  
         fontSize: 16,
-        color: '#9A39DB',
-        fontWeight: 'bold',
+        textAlign: 'center',
+        marginTop: 10,
     },
+    loginButton: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    createAccount: {
+        flexDirection: 'row',
+        marginTop: 20,
+        gap: 5,
+    },
+    account: {
+        color: '#444',
+        fontSize: 16,
+        textAlign: 'center',
+    },
+    createAccountBold: {
+        color: '#444',
+        fontSize: 16,
+        fontWeight: 'bold',
+    }
 });
